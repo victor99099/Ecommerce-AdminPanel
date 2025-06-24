@@ -11,28 +11,12 @@ import 'utils/app-constant.dart';
 @pragma('vm:entry-point')
 Future<void> _firebaseBackgroundHandle(RemoteMessage message) async {
   await Firebase.initializeApp(
-    options: FirebaseOptions(
-        apiKey: "AIzaSyCjcVQALd71MnMEEE8owg7AGCv-dco3sNY",
-        authDomain: "e-commerece-f7d89.firebaseapp.com",
-        projectId: "e-commerece-f7d89",
-        storageBucket: "e-commerece-f7d89.appspot.com",
-        messagingSenderId: "635663434875",
-        appId: "1:635663434875:web:80fad9ea285e6264d4cede",
-        measurementId: "G-JHM1PBZ75Z"),
   );
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: FirebaseOptions(
-        apiKey: "AIzaSyCjcVQALd71MnMEEE8owg7AGCv-dco3sNY",
-        authDomain: "e-commerece-f7d89.firebaseapp.com",
-        projectId: "e-commerece-f7d89",
-        storageBucket: "e-commerece-f7d89.appspot.com",
-        messagingSenderId: "635663434875",
-        appId: "1:635663434875:web:80fad9ea285e6264d4cede",
-        measurementId: "G-JHM1PBZ75Z"),
   );
   FirebaseMessaging.onBackgroundMessage(_firebaseBackgroundHandle);
 
